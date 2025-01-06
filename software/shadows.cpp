@@ -26,6 +26,13 @@ int main(void)
     
     DDRC = _BV(LED0) | _BV(LED1) | _BV(LED2) | _BV(LED3);
     DDRD = _BV(LED4) | _BV(LED5);
+
+    cbi(PORTC, 0);
+    cbi(PORTC, 1);
+    cbi(PORTC, 2);
+    cbi(PORTC, 3);
+    cbi(PORTD, 3);
+    cbi(PORTD, 4);
     for(;;)
         for(i = 0; i < 6; i++)
         {
@@ -34,7 +41,7 @@ int main(void)
             else
                 sbi(PORTD, i - 1);
 
-            _delay_ms(1000);
+            _delay_ms(50);
 
             if (i < 4)
                 cbi(PORTC, i);
