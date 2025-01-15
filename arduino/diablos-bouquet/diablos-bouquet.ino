@@ -24,7 +24,7 @@ int calculate_delay(float pot_value)
 
 void setup() 
 {
-    Serial.begin(9600);
+    //Serial.begin(9600);
     pinMode(LED0, OUTPUT);
     pinMode(LED1, OUTPUT);
     pinMode(LED2, OUTPUT);
@@ -50,7 +50,7 @@ void loop()
         pot_cumulator += analogRead(POT);
     //Serial.println(pot_cumulator / 10);
     _delay = calculate_delay(pot_cumulator / 10);
-    Serial.println(_delay);
+    //Serial.println(_delay);
 
     current_led = (current_led+1) % NUM_LEDS;
 }
