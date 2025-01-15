@@ -1,5 +1,5 @@
 CC=avr-gcc
-CFLAGS=-g -Os -Wall -I../common -mcall-prologues -mmcu=atmega328p -DF_CPU=16000000UL
+CFLAGS=-g -Os -Wall -I../common -mcall-prologues -mmcu=atmega328p -DF_CPU=8000000UL
 OBJ2HEX=avr-objcopy 
 TARGET=shadows
 LDFLAGS = -Wl,-Map,$(TARGET).map
